@@ -1,9 +1,9 @@
 import React from "react";
 
-function Footer () {
+function Footer ({styles}) {
 
   return (
-    <div className="footer center">
+    <div style={styles}>
       <h2>Contact</h2>
       <p>Tory Larabee</p>
       <p>555.555.5555</p>

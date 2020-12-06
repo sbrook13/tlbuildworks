@@ -1,9 +1,9 @@
 import React from "react";
 
-function Header () {
+function Header ({centerStyle}) {
 
   return (
-    <header className="header center">
+    <header style={centerStyle} className="header" >
       <div className="header-outline"></div>
       <h1>TL Buildworks</h1>
     </header>

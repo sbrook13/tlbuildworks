@@ -37,17 +37,79 @@ class App extends Component {
 
     const stackRows = windowWidth < 550;
 
+    const rowStyle = {
+      minHeight: "50vh",
+      width: "100vw",
+      display: "flex",
+      backgroundColor: "rgb(30, 30, 30)",
+      flexDirection: stackRows ? "column" : "row",
+    }
+
+    const testimonialsStyle = {
+      minHeight: "50vh",
+      width: "100vw",
+      display: "flex",
+      backgroundColor: "rgb(30, 30, 30)",
+      flexDirection: stackRows ? "column-reverse" : "row",
+    }
+
+    const blockStyle = {
+      minHeight: "50vh",
+      width: stackRows ? "100vw": "50vw",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "white",
+    }
+
+    const photoStyle = {
+      minHeight: "50vh",
+      width: stackRows ? "100vw": "50vw",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+    }
+
+    const outlineStyle = {
+      border: "2px solid rgb(30, 30, 30)",
+      width: "85%",
+      minHeight: "80%",
+      position: "relative",
+      visibility: stackRows ? "hidden" : "visible",
+    }
+
+    const photoBarStyle = {
+      height: "50vh",
+      width: "100vw",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+    }
+
+    const centerStyle = {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "rgb(30, 30, 30)",
+      minHeight: "50vh",
+    }
+
     return (
       <div className="App">
-        <Header />
-        <ServicesSection />
-        <TestimonialsSection />
-        <div className="row"> 
-          <div className="photo-bar photo-3 center">
+        <Header centerStyle={centerStyle}/>
+        <ServicesSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/>
+        <TestimonialsSection rowStyle={testimonialsStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/>
+        <div style={rowStyle}> 
+          <div className="photo-3" style={photoBarStyle}>
             <h2>"If you build it, they will come"</h2>
           </div>
         </div>
-        <Footer />
+        <Footer styles={centerStyle} />
       </div>
     );
   }

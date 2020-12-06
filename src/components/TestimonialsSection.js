@@ -1,14 +1,14 @@
 import React from "react";
 
-function TestimonialsSection() {
+function TestimonialsSection({rowStyle, blockStyle, photoStyle, outlineStyle}) {
 
   return (
-    <div className="row">
-      <div className="content-block center">
+    <div style={rowStyle}>
+      <div style={blockStyle}>
         <h2>Testimonials</h2>
       </div>
-      <div className="photo-block photo-2 center">
-        <div className="outline"></div>
+      <div className="photo-2" style={photoStyle}>
+        <div style={outlineStyle}></div>
       </div>
     </div>
   );

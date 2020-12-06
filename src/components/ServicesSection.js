@@ -1,13 +1,13 @@
 import React from "react";
 
-function ServicesSection() {
+function ServicesSection({rowStyle, blockStyle, photoStyle, outlineStyle}) {
 
   return (
-    <div className="row">
-      <div className="photo-block photo-1 center">
-        <div className="outline"></div>
+    <div style={rowStyle}>
+      <div className="photo-1" style={photoStyle}>
+        <div style={outlineStyle}></div>
       </div>
-      <div className="content-block center">
+      <div style={blockStyle}>
         <h2>Services</h2>
       </div>
     </div>
