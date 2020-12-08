@@ -17,6 +17,8 @@ h1 {
 }
 h2 {
   font-weight: 200;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 p, li {
