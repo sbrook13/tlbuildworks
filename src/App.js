@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
+import AboutSection from './components/AboutSection'
 import ServicesSection from './components/ServicesSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import Footer from './components/Footer'
@@ -35,7 +36,7 @@ class App extends Component {
   render () {
     const {windowWidth} = this.state
 
-    const stackRows = windowWidth < 550;
+    const stackRows = windowWidth < 600;
 
     const rowStyle = {
       minHeight: "50vh",
@@ -57,6 +58,7 @@ class App extends Component {
       minHeight: "50vh",
       width: stackRows ? "100vw": "50vw",
       display: "flex",
+      flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
       color: "white",
@@ -102,11 +104,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header centerStyle={centerStyle}/>
-        <ServicesSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/>
+        <AboutSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle} />
         <TestimonialsSection rowStyle={testimonialsStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/>
+        <ServicesSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/>
         <div style={rowStyle}> 
           <div className="photo-3" style={photoBarStyle}>
-            <h2>"If you build it, they will come"</h2>
+            <h1>"If you build it, they will come"</h1>
           </div>
         </div>
         <Footer styles={centerStyle} />
