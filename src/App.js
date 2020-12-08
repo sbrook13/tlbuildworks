@@ -104,12 +104,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header centerStyle={centerStyle}/>
-        <AboutSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle} />
+        <ServicesSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/> 
         <TestimonialsSection rowStyle={testimonialsStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/>
-        <ServicesSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle}/>
+        <AboutSection rowStyle={rowStyle} blockStyle={blockStyle} photoStyle={photoStyle} outlineStyle={outlineStyle} />
         <div style={rowStyle}> 
           <div className="photo-3" style={photoBarStyle}>
-            <h1>"If you build it, they will come"</h1>
+            <h1>Built with LOVE</h1>
           </div>
         </div>
         <Footer styles={centerStyle} />
